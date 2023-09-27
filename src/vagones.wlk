@@ -15,6 +15,9 @@ class VagonDePasajeros {
 	method pesoMax()= 2000 + 80 * self.cantidadDePasajeros() + self.carga() 
 	
 	method esPopular()= self.cantidadDePasajeros() > 50 
+	
+	method esVagonCarguero()= self.carga() >= 1000
+	method hacerMantenimiento() {estaOrdenado= true}
 }
 
 class VagonDeCarga{
@@ -27,6 +30,9 @@ class VagonDeCarga{
 	method tieneBanios()= false 
 	
 	method esPopular()= false 
+	
+	method esVagonCarguero()= self.carga() >= 1000
+	method hacerMantenimiento() {0.max(maderasSueltas - 2)}
 }
 
 class VagonDeDormitorio {
@@ -38,6 +44,10 @@ class VagonDeDormitorio {
 	method carga()= 1200
 	method tieneBanios()= true 
 	method esPopular()= self.cantidadDePasajeros() > 50 
+	
+
+	method esVagonCarguero()= self.carga() >= 1000
+	method hacerMantenimiento() {}
 }
 
 //instanciar
