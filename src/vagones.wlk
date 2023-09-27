@@ -48,6 +48,8 @@ class VagonDeDormitorio {
 
 	method esVagonCarguero()= self.carga() >= 1000
 	method hacerMantenimiento() {}
+	
+	//method puedeTransportar(unValor)= self.carga() >= unValor
 }
 
 //instanciar
